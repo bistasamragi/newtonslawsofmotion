@@ -1,0 +1,78 @@
+<title>Newtons Laws of Motion</title>
+<html>
+<head>
+  <link rel="stylesheet" href="style/main.css"/>
+  <link rel="stylesheet" href="script/first.js">
+  <script src="https://kit.fontawesome.com/021d6a2ee6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav> 
+    <a class="nav-link" href="index.html">
+      <i class="fa-solid fa-house"></i>
+      Home
+    </a>
+    <a class="active nav-link" href="first.html"> 1st law </a>
+    <a class="nav-link" href="second.html">2nd law </a>
+    <a class="nav-link" href="third.html">3rd law </a>
+  </nav>
+
+  <form>
+    <h2> 1st Law of Motion: the Law of Inertia </h2>
+  </form>
+
+  <p>Newton’s first law states that if a body is at rest or moving at a constant speed in a straight line, it will remain at rest or keep moving in a straight line at constant speed unless it is acted upon by a force.</p>
+
+  <center>
+  <button id="startButton">Start Animation</button>
+  <button id="stopButton">Stop Animation</button>
+  </center>
+  <center>
+    <canvas id="theCanvas" width="800" height="500" style="border:1px solid #000000;"></canvas>
+  </center>
+  
+
+
+
+  <script>
+    var theCanvas = document.getElementById("theCanvas");
+    var theContext = theCanvas.getContext("2d");
+    var ball = {
+      x: 250,
+      y: 250,
+      radius: 35,
+      velocity: 2,
+      direction: 1
+    };
+    var animationId;
+
+    function drawBall() {
+      theContext.clearRect(0, 0, theCanvas.width, theCanvas.height);
+      theContext.beginPath();
+      theContext.arc(ball.x, ball.y, ball.radius, 0, 2 * Math.PI);
+      theContext.fillStyle = "purple";
+      theContext.fill();
+    }
+
+    function moveBall() {
+      ball.x += ball.velocity * ball.direction;
+
+      if (ball.x + ball.radius >= theCanvas.width || ball.x - ball.radius <= 0) {
+        ball.direction *= -1; // Reverse direction on reaching canvas edges
+      }
+
+      drawBall();
+      animationId = window.requestAnimationFrame(moveBall);
+    }
+
+    document.getElementById("startButton").addEventListener("click", function () {
+      animationId = window.requestAnimationFrame(moveBall);
+    });
+
+    document.getElementById("stopButton").addEventListener("click", function () {
+      window.cancelAnimationFrame(animationId);
+    });
+
+  </script>
+</body>
+</html>

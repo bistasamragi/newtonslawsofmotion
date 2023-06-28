@@ -1,0 +1,44 @@
+<title>Newtons Laws of Motion</title>
+<html>
+<head>
+  <link rel="stylesheet" href="style/main.css"/>
+  <script src="https://kit.fontawesome.com/021d6a2ee6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<nav>
+    <a class="nav-link" href="index.html">
+      <i class="fa-solid fa-house"></i>
+          Home
+    </a>
+		<a class="nav-link" href="first.html"> 1st law </a>
+		<a class="active nav-link" href="second.html">2nd law </a>
+		<a class="nav-link" href="third.html">3nd law </a>
+	</nav>
+
+
+	<form>
+		<h2> 2nd Law of Motion: F = ma</h2>
+	</form>
+
+	<p>the time rate of change of the momentum of a body is equal in both magnitude and direction to the force imposed on it. </p>
+
+ <center>
+  <canvas id="theCanvas" width="800" height="500" style="border:1px solid #000000;"></canvas>
+</center>
+
+<script>
+		var theCanvas = document.getElementById("theCanvas");
+	  var theContext = theCanvas.getContext("2d");
+	  var x = 300;
+	  var y = 50;
+	  moveProjectile();
+	  function drawProjectile() {
+		  theContext.clearRect(0, 0, theCanvas.width, theCanvas.height);
+		  theContext.beginPath();
+		  theContext.arc(x, y, 30 0, 2*Math.PI);
+		  theContext.fillStyle = "pink";
+		  theContext.fill();
+</script>
+</body>
+</html>

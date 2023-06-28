@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+
+body {
+  font-size: 20px; 
+  padding: 60px;
+}
+
+form {
+  width: 450px;
+  margin: 30px auto;
+}
+
+h2 { 
+  text-align: center;
+  margin-top: 60px;
+  font-weight: normal;
+  font-family: "Marcellus";
+}
+
+p{
+	text-align:center;
+  font-family: "Marcellus";
+}
+
+div { 
+  margin: 10px 0;
+  display: inline-block;
+}
+
+input {
+  padding: 15px;
+  border: 2px solid lightgray;
+}
+
+label {
+  display: block;
+  line-height: 1.8;
+}
+
+button{
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgb(13, 13, 107);
+  color: white;
+  border-radius: 4px;
+  border: 2px solid rgb(13, 13, 107);
+  text-align: left;
+  font-family: "Marcellus";
+}
+
+button:hover{
+  border-color: rgb(107, 107, 200);
+  background: rgb(107, 107, 200);
+  color:white;
+  font-family: "Marcellus";
+}
+
+.button{
+  border:none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px 40px;
+  background: rgb(107, 107, 200);
+  color: white;
+  border-radius: 4px;
+  border: 2px solid rgb(107, 107, 200);
+  font-family: "Marcellus";
+}
+
+.button:hover{
+  border-color: rgb(13, 13, 107);
+  background: rgb(13, 13, 107);
+  color:white;
+  font-family: "Marcellus";
+}
+
+nav {
+  background-color: rgb(13, 13, 107);
+  text-align:center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-link {
+  text-decoration:none;
+  display: inline-block;
+  color:white;
+  padding:20px;
+  font-family: "Marcellus";
+}
+
+.nav-link:hover{
+  background-color:rgb(107, 107, 200);
+  color:rgb(13, 13, 107);
+  font-family: "Marcellus";
+}
+
+.active{
+  background-color:rgb(107, 107, 200);
+  color:rgb(13, 13, 107);
+  font-family: "Marcellus";
+}
+
+
